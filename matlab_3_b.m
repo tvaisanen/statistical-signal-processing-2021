@@ -19,6 +19,10 @@ phi_k1 = @(f0_k, phi_k) phi_k - (1/M) * sum(xn(ns) .* sin(2*pi*f0_k*ns + 2*phi_k
 
 simulated = zeros(iterations,2);
 
+
+f0_k  = f0;
+phi_k = phi;
+
 for i = 1:iterations
     f0_k  = f0_k1(f0_k, phi_k);
     phi_k = phi_k1(f0_k, phi_k);
