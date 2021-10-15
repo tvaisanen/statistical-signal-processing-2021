@@ -30,6 +30,8 @@ for i = 1:iterations
     simulated(i,:) = [f0_k, phi_k];
 end
 
+figure(1)
+clf
 plot(1:10,simulated(:,1))
 hold on
 plot(1:10,simulated(:,2))
